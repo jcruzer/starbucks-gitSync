@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Starbucks Coffee Korea</title>
+
+  <!-- 추가설명 : https://github.com/ParkYoungWoong/starbucks-vanilla-app -->
+  <!-- 아래처럼 요약된 정보인 오픈그래프를 메타정보에 추가해야함 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Starbucks" />
+  <meta property="og:title" content="Starbucks Coffee Korea" />
+  <meta property="og:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+  <meta property="og:image" content="./images/starbucks_seo.jpg" />
+  <meta property="og:url" content="https://starbucks.co.kr" />
+
+  <!-- 이미지 파일 SEO, 검색엔진 최적화, search Engine Optimization -->
+
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Starbucks" />
+  <meta property="twitter:title" content="Starbucks Coffee Korea" />
+  <meta property="twitter:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+  <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
+  <meta property="twitter:url" content="https://starbucks.co.kr" />
+  
+  <link rel="icon" href="./favicon.png"/>
+  <!-- favicon.ico(64x64px)가 있으면 자동으로 연결 / 없다면 저런식으로 아이콘 링크(500x500px)-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- 이런저런 링크들은 되도록이면 main.css 위에다 작성 -->
+  <link rel="stylesheet" href="./css/main.css"/>
+  
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <a href="/">
+        <!-- 이런식으로 "/" 최상위루트(메인페이지)를 링크로 해도됨 -->
+        <img class="logo" src="./images/starbucks_logo.png" alt="STARBUCKS">
+        <!-- img 태그는 인라인 요소라 베이스라인(문자의 기준선)이 존재 / 이걸 인라인->블럭요소로 변경해 없애줘야함-->
+      </a>
+
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="/signin">Sign In</a>
+          </li>
+          <li>
+            <!-- 특정 링크 미지정 방법 2가지 / 보통 javascript:void(0) 씀-->
+            <a href="#">My Starbucks</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Customer Service & Ideas</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Find a Store</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text"/>
+          <div class="material-icons">search</div>
+        </div>
+      </div>     
+
+      <ul class="main-menu">
+        <li class="item">
+          <div class="item__name">COFFEE</div>
+          <div class="item__contents">
+
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item__name">MENU</div>
+          <div class="item__contents">
+            
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item__name">STORE</div>
+          <div class="item__contents">
+            
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item__name">RESPONSIBILITY</div>
+          <div class="item__contents">
+            
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item__name">MY STARBUCKS REWARDS</div>
+          <div class="item__contents">
+            
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item__name">WHAT'S NEW</div>
+          <div class="item__contents">
+            
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+  
+</body>
+</html>
