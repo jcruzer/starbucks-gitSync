@@ -16,20 +16,23 @@ a {
   text-decoration: none;
 }
 
+/* width 지정하고 margin : 0 autu; 하면 확대하면 왼쪽에 고정 축소하면 가운데 정렬*/
+/* height 지정하고 margin : autu 0; 하면 확대하면 위쪽에 고정 축소하면 가운데 정렬*/
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
 /* HEADER */
 header {
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
 }
 
-header .inner {
-  width: 1100px;
+/* 사용하는 공간에 따라 inner 높이 지정 */
+header>.inner {
   height: 120px;
-  margin: 0 auto;
-  /* width 지정하고 margin : 0 autu; 하면 확대하면 왼쪽에 고정 축소하면 가운데 정렬*/
-  /* height 지정하고 margin : autu 0; 하면 확대하면 위쪽에 고정 축소하면 가운데 정렬*/
-
-  position: relative;
 }
 
 header .logo {
@@ -168,4 +171,27 @@ header .main-menu .item:hover .item__name {
   border-radius: 6px 6px 0 0;
 }
 
-header .main-menu .item .item__contents {}
+header .main-menu .item .item__contents {
+  width: 100%;
+  position: fixed;
+  /* inner 안에서 뜨는게 아니라 뷰표트 전체에 뜨게 함 */
+  /* top bottom 속성을 사용하지 않아 수직위치 없으면 원래위치 사용 */
+  left: 0;
+  display: none;
+  /* 메뉴창들이 hover됐을 때만 보여주기 위해 */
+}
+
+header .main-menu .item:hover .item__contents {
+  display: block;
+  /* 메뉴창들이 hover됐을 때만 보여주기 위해 */
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: red;
+  height: 200px;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+  background-color: orange;
+  height: 100px;
+}
