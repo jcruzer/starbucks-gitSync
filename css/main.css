@@ -5,6 +5,8 @@ body {
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
   /* 이런식으로 font-family 추가해야함, 앞에꺼먼저 인식하고 점차 뒤로 따옴표는 띄어쓰기 있는 폰트에서 씀 */
+  height: 3000px;
+  /* 스크롤 만드려고 잠깐 */
 }
 
 /* img 태그는 인라인 요소라 베이스라인(문자의 기준선)이 존재 / 이걸 인라인->블럭요소로 변경해 없애줘야함 */
@@ -26,8 +28,15 @@ a {
 
 /* HEADER */
 header {
+  width: 100%;
+  /* position:fixed때문에 가로넓이 최소한으로 주려드려고 해서 w:auto 해도 자동정렬 안됨 */
+  /* 그래서 width:100%사용해야함 */
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  /* position: relative; */
+  /* header .badges 의 부모요소라 추가 */
+  position: fixed;
+  top: 0;
 }
 
 /* 사용하는 공간에 따라 inner 높이 지정 */
@@ -232,4 +241,18 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #690;
   margin: 4px 0 14px;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
 }
