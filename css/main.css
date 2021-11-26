@@ -168,6 +168,7 @@ header .main-menu {
 
 header .main-menu .item {}
 
+
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
@@ -256,3 +257,33 @@ header .badges .badge {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
   cursor: pointer;
 }
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  /* header.inner의 높이가 120px이라 margin-top 120px */
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+
+}
+
+/* common에서 적용된 inner 속성들이 상속되어서 사용됨 */
+.visual .inner {
+  height: 646px;
+  background-color: orange;
+}
+
+/* 중복된, 감싸주는 역할인 선택자는 생략 ex) inner*/
+.visual .tittle {}
+
+.visual .tittle .btn {}
+
+.visual .cup1.image {}
+
+.visual .cup1.text {}
+
+.visual .cup2.image {}
+
+.visual .cup2.text {}
+
+.visual .spoon {}
