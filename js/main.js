@@ -48,3 +48,12 @@ window.addEventListener('scroll', _.throttle(function(){
     });
   }
 }, 300));
+
+// 클래스에 fade-in 들어간거 모두 찾아서 딜레이로 애니메이션효과
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function(fadeEl, index){
+  gsap.to(fadeEl, 1,{
+    delay: (index + 1) * .7,  // 딜레이로 0.7초 1.4초 2.1초 2.7초뒤 순차적 등장
+    opacity:1
+  });
+});
