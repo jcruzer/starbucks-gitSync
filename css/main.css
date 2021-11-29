@@ -601,3 +601,59 @@ header .badges .badge {
   background-color: #333;
   color: #fff;
 }
+
+/* REWARDS */
+.rewards {
+  position: relative;
+}
+
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.rewards .inner {
+  background-image: url('../images/rewards.jpg');
+  height: 241px;
+  /* position: relative; */
+  /* 최상위 inner에서 position값 있어서 안씀 */
+}
+
+.rewards .btn-group {
+  position: absolute;
+  bottom: 24px;
+  right: 0px;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  /* 넘치면 줄바꿈하는거, 버튼은 130px인데 2개하면 260px이라 안넘쳐서 수정 */
+}
+
+.rewards .btn-group .btn.sign-up {
+  margin-right: 10px;
+}
+
+.rewards .btn-group .btn.sign-in {
+  width: 110px;
+
+}
+
+.rewards .btn-group .btn.gift {
+  margin-top: 10px;
+  flex-grow: 1;
+  /* e-gift는 최대한의 넓이 사용하기 위해서 flex-grow=1 */
+
+}
