@@ -86,6 +86,18 @@ new Swiper('.promotion .swiper.container',{
   }
 });
 
+new Swiper('.awards .swiper.container', {
+  // direction:'horizontal' 기본값
+  autoplay:true,
+  loop:true,
+  spaceBetween:30,
+  slidesPerView:5,
+  navigation:{
+    prevEl:'.awards .swiper-prev',
+    nextEl:'.awards .swiper-next'
+  }
+});
+
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;

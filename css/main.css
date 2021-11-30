@@ -974,3 +974,54 @@ overflow:hidden이라 youtube 영역에서 짤리는 그림을 아래 season-pro
 .find-store .text-group .description {
   margin-bottom: 20px;
 }
+
+/* AWARDS */
+.awards {
+  background-color: #272727;
+}
+
+.awards .inner {
+  padding: 40px 0;
+}
+
+.awards .swiper.container {
+  width: 100%;
+  height: 40px;
+}
+
+.awards .swiper-prev,
+.awards .swiper-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  outline: none;
+  /* 선택했을때 테두리 파란색으로 뜨는거 없애주기 위해 */
+  color: #fff;
+  opacity: .3;
+  cursor: pointer;
+  /* 가운데 정렬하려면 display:flex + justify-content/align-items : center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 부모요소 기준(inner / 이미 position 헤더에 값있음) */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  /* 가운데정렬 / w나 h값 있어야함 */
+}
+
+.awards .swiper-prev {
+  left: -100px;
+}
+
+.awards .swiper-next {
+  right: -100px;
+}
+
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover {
+  background-color: #fff;
+  color: #333;
+}
