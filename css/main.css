@@ -832,7 +832,53 @@ overflow:hidden이라 youtube 영역에서 짤리는 그림을 아래 season-pro
   background-size: cover;
 }
 
-
 .reserve-store .inner {
   height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-store .medal {
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+
+/* 다중선택자 */
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  width: 334px;
+  height: 344px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.reserve-store .medal .front {
+  /* position: absolute;
+  다중선택자에 넣으면서 주석처리 */
+  transform: rotateY(0deg);
+}
+
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.reserve-store .medal .back {
+  /* position: absolute;  btn때문에 부모 요소에 넣었지만
+  다중선택자에 넣어도 될듯*/
+  transform: rotateY(-180deg);
+}
+
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
