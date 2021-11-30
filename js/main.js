@@ -24,6 +24,7 @@ searchInputEl.addEventListener('blur', function(){
 });
 
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 // [lodash - throttle]~초단위로 부하를 줘서 함수가 실행되게 만드는 함수 스크롤작업할때 많이 쓰는 함수
 // ._throttle(함수, 시간ms)
@@ -33,11 +34,15 @@ window.addEventListener('scroll', _.throttle(function(){
     // 뱃지 숨기기
     // badgeEl.style.display = 'none';
     // gsap.to(요소,지속시간,옵션); 옵션은 보통 객체데이터로 {여러개 씀 여기서 숫자는 그대로, 문자는 '' 사용}
+    // 요소를 변수에 저장해서 querySelector로 선택해도 되지만 id나 class로 직접 찾아도 가능(ex. gsap.to('#to-top',~~~~))
     gsap.to(badgeEl, .6, {
       opacity:0,
       display:'none'
     });
-    
+    // 버튼 보이기
+    gsap.to('toTopEl', .2, {
+      x:0
+    });
   }
   else{
     // 뱃지 보이기
@@ -46,8 +51,18 @@ window.addEventListener('scroll', _.throttle(function(){
       opacity:1,
       display:'block'
     });
+    // 버튼 숨기기
+    gsap.to('toTopEl', .2, {
+      x:100
+    });
   }
 }, 300));
+
+toTopEl.addEventListener('click', function(){
+  gsap.to(window, .7, {   // 윈도우(화면) 객체
+    scrollTo : 0          // scroll을 해당지점으로 이동시켜줌
+  });
+});
 
 // 클래스에 fade-in 들어간거 모두 찾아서 딜레이로 애니메이션효과
 const fadeEls = document.querySelectorAll('.visual .fade-in');
@@ -156,3 +171,7 @@ spyEls.forEach(function(spyEl){
   .addTo(new ScrollMagic.Controller());
 
 });
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();   // textContet는 문자 안에 값을 지정하는 메소드
+// getFullYear 현재 시스템상 시간의 연도를 가져옴

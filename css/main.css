@@ -1025,3 +1025,118 @@ overflow:hidden이라 youtube 영역에서 짤리는 그림을 아래 season-pro
   background-color: #fff;
   color: #333;
 }
+
+/* FOOTER */
+footer {
+  background-color: #272727;
+  border-top: 1px solid #333;
+}
+
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+
+
+footer .menu li {
+  position: relative;
+
+}
+
+footer .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  /* 얘는 display가 자동으로 block으로 바뀜 */
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+  /* 수직 가운데 배치 */
+}
+
+footer .menu li:last-child::before {
+  display: none;
+}
+
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+  /* 사용자가 누르기 편하게 a요소 범위 넓힘, 인라인요소라 padding 안되서 block요소로 변경  */
+}
+
+footer .menu li a.green {
+  color: #690;
+}
+
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  /* 수평 */
+}
+
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child {
+  margin-right: 0;
+}
+
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+footer .logo {
+  margin: 30px auto 0;
+  /* 좌 우 가운데정렬하려면 h나 w값 필요한데 img요소라 이미 값을 알고있다고 가정 */
+  /* img요소가 display:block + margin:0 auto 인 경우 width속성 없이 가운데 정렬 가능 */
+
+}
+
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  /* 다른섹션들보다 위에 있게 하기위해 */
+}
