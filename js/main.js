@@ -131,3 +131,16 @@ function floatingObject(selector, delay, size){
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function(spyEl){
+  // new ScrollMagic.Scene().setClassToggle().addTo()   // 특정요소를 감시하는 메소드.특정클래스를 지정하는(토글하는) 메소드.컨트롤하는 메소드
+  new ScrollMagic
+  .Scene({
+    triggerElement: spyEl, // 요소 할당(spyEls 객체 여러개중 하나씩 받는거, 감시하는 요소)
+    triggerHook: .8,  // 뷰포트 top:0 bottom:1인데 위에서 80%부분 감시판반 부분
+  })
+  .setClassToggle(spyEl, 'show')
+  .addTo(new ScrollMagic.Controller());
+
+});
